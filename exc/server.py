@@ -15,19 +15,6 @@ chatbot_vn = ChatbotAI(excel_path, language='Vietnamese')
 def home():
     return app.send_static_file('index.html')
 
-# @app.route('/query/', methods=['POST'])
-# def query():
-#     data = request.json
-#     question = data.get('query', '')
-
-#     # Fixed the language detection logic
-#     if any(char in "ủũụọõỏẹẻẽịĩỉìạãảàăâđêôơư" for char in question.lower()):
-#         answer = chatbot_vn.get_answer(question) 
-#     else:
-#         answer = chatbot_en.get_answer(question)
-
-#     return jsonify({'response': answer})
-
 @app.route('/query/', methods=['POST'])
 def query():
     data = request.json
@@ -38,7 +25,7 @@ def query():
         # Vietnamese-specific characters
         vietnamese_chars = "ủũụọõỏẹẻẽịĩỉìạãảàăâđêôơư"
         # Common Vietnamese words or phrases without accents
-        vietnamese_keywords = ['la', 'gi', 'ban', 'toi', 'khong', 'nhe', 'co', 'khong']
+        vietnamese_keywords = ['la', 'ai', 'ue', 'oi', 'au', 'ua', 'oe', 'gi', 'ban', 'toi', 'khong', 'nhe', 'co', 'khong']
         
         question_lower = question.lower()
         # Check for Vietnamese-specific characters
