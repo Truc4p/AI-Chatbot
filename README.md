@@ -29,6 +29,19 @@ To get started with this project, follow these steps:
 3. Open your web browser and go to `http://localhost:8000` to view the web application.
 4. For documentation, navigate to the `htm/rtdocs/` directory and open any `.html` file in your web browser.
 
+### Running the Applications
+
+exc:
+   ```sh
+   cd exc
+   python server.py
+   ```
+htm:
+   ```sh
+   cd htm
+   uvicorn main:app --reload
+   ```
+
 ## Contributing
 
 We welcome contributions to this project. Please follow these steps to contribute:
