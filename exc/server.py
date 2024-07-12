@@ -23,9 +23,9 @@ def query():
     # Enhanced language detection logic
     def is_vietnamese(question):
         # Vietnamese-specific characters
-        vietnamese_chars = "ủũụọõỏẹẻẽịĩỉìạãảàăâđêôơư"
+        vietnamese_chars = "ủũụọõỏẹẻẽịĩỉìạãảàăâđêôơưđ"
         # Common Vietnamese words or phrases without accents
-        vietnamese_keywords = ['la', 'ai', 'ue', 'oi', 'au', 'ua', 'oe', 'gi', 'ban', 'toi', 'khong', 'nhe', 'co', 'khong']
+        vietnamese_keywords = ['la', 'ai', 'bao', 'nao', 'dau', 'cua', 'gi', 'ban', 'toi', 'minh', 'khong', 'nhe', 'co', 'thi', 'thoi', 'the'] # 'ue', 'oi', 'oe', 'ua'
         
         question_lower = question.lower()
         # Check for Vietnamese-specific characters
